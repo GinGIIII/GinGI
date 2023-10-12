@@ -17,6 +17,9 @@ int main() {
         int random_xi = std::rand() % 11 - 5;
         int random_yi = std::rand() % 11 - 5;
 
+        // Выполним побитовую операцию между xi ИЛИ yi
+        int result = xi | yi;
+
         // Вычислим радиус точки
         double radius = std::sqrt((xi + random_xi) * (xi + random_xi) + (yi + random_yi) * (yi + random_yi));
 
@@ -33,19 +36,20 @@ int main() {
         } else if (radius >= 4 && radius < 5) {
             points = 1;
         } else {
-            // Если вы попали вне радиуса, начислить 0 баллов
             points = 0;
         }
+        
         totalPoints += points;
+
         // Вывод случайного отклонения
         std::cout << "Случайное отклонение (random_x, random_y): " << random_xi << ", " << random_yi << std::endl;
         std::cout << "За выстрел " << i + 1 << " получено " << points << " баллов. Радиус точки: " << radius << ". Всего баллов: " << totalPoints << std::endl;
     }
     // Проверим, является ли игрок "лузером"
     if (totalPoints < 10) {
-    std::cout << "Сумма баллов: " << totalPoints << " лузер" << std::endl;
-} else {
-    std::cout << "Сумма баллов: " << totalPoints << " чеееел, мега крут!" << std::endl;
-}
-return 0;
+        std::cout << "Сумма баллов: " << totalPoints << " лузер" << std::endl;
+    } else {
+        std::cout << "Сумма баллов: " << totalPoints << " чеееел, мега крут!" << std::endl;
+    }
+    return 0;
 }
