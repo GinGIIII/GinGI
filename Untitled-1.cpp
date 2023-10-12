@@ -36,8 +36,6 @@ int main() {
             // Если вы попали вне радиуса, начислить 0 баллов
             points = 0;
         }
-        
-        
         totalPoints += points;
         // Вывод случайного отклонения
         std::cout << "Случайное отклонение (random_x, random_y): " << random_xi << ", " << random_yi << std::endl;
