@@ -52,7 +52,7 @@ public:
     }
 };
 
-// Дочерний класс Сотрудник, наследуется от Human
+// Дочерний класс Gun2, наследуется от Human
 class Gun2 : virtual public Human {
 private:
     std::string patron;
@@ -73,7 +73,7 @@ public:
     }
 };
 
-// Дочерний класс Характеристика, наследуется от Human
+// Дочерний класс Gun3, наследуется от Human
 class Gun3 : virtual public Human {
 private:
     std::string production;
@@ -94,7 +94,7 @@ public:
     }
 };
 
-// Дочерний класс Студент-Сотрудник, наследуется от Студент и Сотрудник
+// Дочерний класс Gun1Gun2, наследуется от Gun1 и Gun2
 class Gun1Gun2 : public Gun1, public Gun2 {
 public:
     Gun1Gun2(const std::string& m, int p, const std::string& prod, const std::string& pat)
@@ -106,7 +106,7 @@ public:
     }
 };
 
-// Дочерний класс Сотрудник-Характеристика, наследуется от Сотрудник и Характеристика
+// Дочерний класс Gun2Gun3, наследуется от Gun2 и Gun3
 class Gun2Gun3 : public Gun2, public Gun3 {
 public:
     Gun2Gun3(const std::string& m, int p, const std::string& pat, const std::string& prod)
